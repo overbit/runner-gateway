@@ -1,0 +1,30 @@
+{
+  "variable": "CI_PRIVATE_RUNNER",
+  "providers": [
+    {
+      "name": "github",
+      "runner": "ubuntu-latest",
+      "quota": {
+        "type": "minutes",
+        "included_minutes": 2000,
+        "reserve_minutes": 100
+      }
+    },
+    {
+      "name": "blacksmith",
+      "runner": "blacksmith-4vcpu-ubuntu-2404",
+      "quota": {
+        "type": "minutes",
+        "included_minutes": 3000,
+        "reserve_minutes": 100
+      }
+    },
+    {
+      "name": "fallback",
+      "runner_env": "FALLBACK_RUNNER",
+      "quota": {
+        "type": "always"
+      }
+    }
+  ]
+}
