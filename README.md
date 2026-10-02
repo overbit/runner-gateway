@@ -32,3 +32,11 @@ The first run verifies billing access and creates `CI_PRIVATE_RUNNER=ubuntu-late
 ## Status
 
 The first implementation slice provides secure GitHub App authentication and organization-variable bootstrap. Provider quota evaluation and fallback routing come next.
+
+## Project guide
+
+The single-page developer guide lives in `site/`. It uses static HTML, CSS, and JavaScript with self-hosted fonts and no runtime dependencies.
+
+Preview locally with Node.js and `pnpm start`, then open `http://127.0.0.1:4173`. No package installation is needed. Alternatively, run `python3 -m http.server 4173 --directory site`.
+
+To publish, select **GitHub Actions** under **Settings → Pages → Build and deployment → Source** in the repository, then run **Deploy project guide** or push a change to `site/` on `main`. The Pages workflow publishes only `site/`; it does not publish source credentials or development design notes. Adding these files alone does not enable Pages or create a remote deployment.

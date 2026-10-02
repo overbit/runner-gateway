@@ -1,0 +1,7 @@
+{
+  "name": "runner-gateway-guide",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve-site.mjs"
+  }
+}
